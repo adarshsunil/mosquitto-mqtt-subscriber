@@ -16,6 +16,7 @@ git clone https://github.com/adarshsunil/mosquitto-mqtt-subscriber.git
 
 cd mosquitto-mqtt-subscriber
 
+```
 
 Steps :
 
