@@ -11,7 +11,7 @@ Task 1: Set up Mosquitto Broker Using Docker Compose
 
 
 Clone this repository to your local machine:
-
+```bash
 git clone https://github.com/adarshsunil/mosquitto-mqtt-subscriber.git
 
 cd mosquitto-mqtt-subscriber
