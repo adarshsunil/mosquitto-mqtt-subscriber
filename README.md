@@ -52,5 +52,8 @@ Log file of Mosquitto will be available at mosquitto/log. This file can be viewe
 ```bash
  sudo cat mosquitto/log/mosquitto.log
 ```
-
+To stop Docker, use
+```bash
+docker-compose down
+'''
 
