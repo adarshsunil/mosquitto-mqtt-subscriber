@@ -21,7 +21,7 @@ The Docker Compose file includes the images and ports for setting up Mosquitto B
 
 Separate folders are created for log, and data
 ```bash
-mkdir -p mosquitto/config mosquitto/data mosquitto/log)
+mkdir -p mosquitto/data mosquitto/log
 ```
 The configuration file mosquito.conf is inside config folder  to initialise the listener port, connections and log file
 
@@ -32,5 +32,25 @@ sudo docker-compose up -d
 ```
 
 (-d flag is set to run the container in detached mode in background to free up the terminal
+
+Testing publish and subscribe with Mosquitto. 
+
+First subscribe to a particular topic (Here ‘test/topic’) with mosquitto_sub. 
+```bash
+mosquitto_sub -h localhost -p 1883 -t "test/topic"
+```
+
+
+Publish the content under the same topic from other terminal using mosquitto_pub
+```bash
+mosquitto_pub -h localhost -p 1883 -t "test/topic" -m "Hello, PowerPal at Maynooth"
+```
+
+
+Log file of Mosquitto will be available at mosquitto/log. This file can be viewed from the command prompt by :
+
+```bash
+ sudo cat mosquitto/log/mosquitto.log
+```
 
 
