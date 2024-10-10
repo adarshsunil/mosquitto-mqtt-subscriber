@@ -1,0 +1,12 @@
+# Ignore Python bytecode
+*.pyc
+__pycache__/
+
+# Ignore log files
+*.log
+
+# Ignore environment configuration files (if sensitive)
+config.env
+
+# Ignore Docker-related files
+*.pid
