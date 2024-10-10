@@ -17,15 +17,20 @@ git clone https://github.com/adarshsunil/mosquitto-mqtt-subscriber.git
 cd mosquitto-mqtt-subscriber
 
 ```
+The Docker Compose file includes the images and ports for setting up Mosquitto Broker with default MQTT port : 1883 (docker-compose.yml)
 
-Steps :
+Separate folders are created for log, and data
+```bash
+mkdir -p mosquitto/config mosquitto/data mosquitto/log)
+```
+The configuration file mosquito.conf is inside config folder  to initialise the listener port, connections and log file
 
-1. The Docker Compose file includes the images and ports for setting up Mosquitto Broker with default MQTT port : 1883 (docker-compose.yml)
-2. Separate folders are created for config, log, and data  (mkdir -p mosquitto/config mosquitto/data mosquitto/log)
-3. The configuration file mosquito.conf is inside config folder  to initialise the listener port, connections and log file
-4. Start the Mosquitto-broker using docker-compose
+Start the Mosquitto-broker using docker-compose
 
-	sudo docker-compose up -d
+```bash
+sudo docker-compose up -d
+```
+
 (-d flag is set to run the container in detached mode in background to free up the terminal
 
 
